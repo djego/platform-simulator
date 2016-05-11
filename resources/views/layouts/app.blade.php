@@ -14,7 +14,7 @@
   <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
   <link href="{{ asset('fonts/css/font-awesome.min.css') }}" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
 
   <!-- Custom styling plus plugins -->
   <link href="{{ asset('css/custom.css')}}" rel="stylesheet">

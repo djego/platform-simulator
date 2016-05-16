@@ -14,6 +14,8 @@ class AddUserCourseTable extends Migration
     {
         Schema::create('user_course', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('course_id');
             $table->timestamps();
         });
     }

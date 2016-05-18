@@ -16,6 +16,7 @@ class AddUserCourseTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('course_id');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

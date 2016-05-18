@@ -88,12 +88,12 @@
                 <li><a><i class="fa fa-edit"></i> Managment <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     @if(Auth::user()->is_teacher)
-                    <li><a href="form.html">Students</a>
+                    <li><a href="{{ url('students') }}">Students</a>
                     </li>
                     @endif
-                    <li><a href="form_advanced.html">Courses</a>
+                    <li><a href="{{ url('courses') }}">Courses</a>
                     </li>
-                    <li><a href="form_validation.html">Scores</a>
+                    <li><a href="{{ url('scores') }}">Scores</a>
                     </li>
                   </ul>
                 </li>
@@ -105,20 +105,7 @@
           <!-- /sidebar menu -->
 
           <!-- /menu footer buttons -->
-          <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout">
-              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-          </div>
+
           <!-- /menu footer buttons -->
         </div>
       </div>
@@ -181,9 +168,7 @@
 
   <script src="js/bootstrap.min.js"></script>
 
-  <!-- gauge js -->
-  <script type="text/javascript" src="js/gauge/gauge.min.js"></script>
-  <script type="text/javascript" src="js/gauge/gauge_demo.js"></script>
+
   <!-- bootstrap progress js -->
   <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
   <!-- icheck -->
@@ -192,7 +177,7 @@
   <script type="text/javascript" src="js/moment/moment.min.js"></script>
   <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
   <!-- chart js -->
-  <script src="js/chartjs/chart.min.js"></script>
+  
 
   <script src="js/custom.js"></script>
 
@@ -207,6 +192,9 @@
   <script type="text/javascript" src="js/flot/jquery.flot.stack.js"></script>
   <script type="text/javascript" src="js/flot/curvedLines.js"></script>
   <script type="text/javascript" src="js/flot/jquery.flot.resize.js"></script>
+
+  @yield('extrajs')
+
   <script>
     $(document).ready(function() {
       // [17, 74, 6, 39, 20, 85, 7]
@@ -329,48 +317,7 @@
     icons.play();
   </script>
 
-  <!-- Doughnut Chart -->
-  <script>
-    $('document').ready(function() {
-      var options = {
-        legend: false,
-        responsive: false
-      };
 
-      new Chart(document.getElementById("canvas1"), {
-        type: 'doughnut',
-        tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-        data: {
-          labels: [
-            "Symbian",
-            "Blackberry",
-            "Other",
-            "Android",
-            "IOS"
-          ],
-          datasets: [{
-            data: [15, 20, 30, 10, 30],
-            backgroundColor: [
-              "#BDC3C7",
-              "#9B59B6",
-              "#E74C3C",
-              "#26B99A",
-              "#3498DB"
-            ],
-            hoverBackgroundColor: [
-              "#CFD4D8",
-              "#B370CF",
-              "#E95E4F",
-              "#36CAAB",
-              "#49A9EA"
-            ]
-          }]
-        },
-        options: options
-      });
-    });
-  </script>
-  <!-- /Doughnut Chart -->
   
   <!-- datepicker -->
   <script type="text/javascript">

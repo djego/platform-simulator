@@ -1,5 +1,5 @@
 @extends('layouts.platform')
-
+@section('title','Home')
 
 @section('content')
       <!-- page content -->
@@ -323,7 +323,7 @@
       <!-- /page content -->
 
 @endsection
-@section
+@section('extrajs')
   <script src="js/chartjs/chart.min.js"></script>
   <!-- Doughnut Chart -->
   <script>

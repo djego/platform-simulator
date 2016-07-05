@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/', 'HomeController@index');
+Route::get('/api', 'ApiController@userConnect');
 
 Route::group(['middleware' => ['web', 'auth']], function () {
     Route::get('students', 'ManagerController@students');
